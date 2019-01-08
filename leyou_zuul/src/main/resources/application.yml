@@ -1,0 +1,53 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: eureka-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+zuul:
+  prefix: /api
+  routes:
+    item-service: /item/**
+    upload-service:
+      path: /upload/**
+      service: upload-service
+      strip-prefix: false
+    user-service: /user/**
+    auth-service: /auth/**
+#    cart-service: /cart/**
+#    order-service: /order-service/**
+#    search-service: /search/**
+#  sensitive-headers:
+#  add-host-header: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ConnetTimeout: 1000
+  ReadTimeout: 5000
+  MaxAutoRestries: 0  #当前服务重试次数
+  MaxAutoRestriesNextServer: 0  #切换重试次数
+#ly:
+#  jwt:
+#    pubKeyPath: /Users/bystander/id_rsa.pub # 公钥地址
+#    cookieName: LY_TOKEN # cookie的名称
+#  filter:
+#    allowPaths:
+#    - /api/auth
+#    - /api/search
+#    - /api/user/register
+#    - /api/user/check
+#    - /api/user/code
+#    - /api/item
+

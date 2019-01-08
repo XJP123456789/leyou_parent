@@ -1,0 +1,33 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: cart-service
+  redis:
+    host: 47.99.171.90
+    password: 941008
+    port: 6379
+    database: 1
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1
+        min-idle: 0
+        max-idle: 10
+    timeout: 1000
+  rabbitmq:
+    username: admin
+    password: admin
+    virtual-host: /
+    host: 127.0.0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+ly:
+  jwt:
+    pubKeyPath: /Users/bystander/id_rsa.pub # 公钥地址
+    cookieName: LY_TOKEN # cookie的名称
