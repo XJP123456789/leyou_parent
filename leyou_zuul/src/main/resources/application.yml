@@ -21,9 +21,9 @@ zuul:
       strip-prefix: false
     user-service: /user/**
     auth-service: /auth/**
-#    cart-service: /cart/**
-#    order-service: /order-service/**
-#    search-service: /search/**
+    cart-service: /cart/**
+    order-service: /order-service/**
+   search-service: /search/**
 #  sensitive-headers:
 #  add-host-header: true
 hystrix:

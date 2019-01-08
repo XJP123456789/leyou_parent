@@ -14,8 +14,8 @@ import java.security.PublicKey;
  */
 public class JwtUtilsTest {
 
-    private static final String publicKeyPath = "/Users/bystander/rsa.pub";
-    private static final String privateKeyPath = "/Users/bystander/rsa.pri";
+    private static final String publicKeyPath = "E:\\key\\pri\\rsa.pub";
+    private static final String privateKeyPath = "E:\\key\\pri\\rsa.pri";
 
     private PrivateKey privateKey;
     private PublicKey publicKey;
@@ -23,7 +23,7 @@ public class JwtUtilsTest {
 
     @Test
     public void testRsa() throws Exception {
-        RsaUtils.generateKey(publicKeyPath, privateKeyPath, "234");
+        RsaUtils.generateKey(publicKeyPath, privateKeyPath, "2345");
     }
 
     @Before
