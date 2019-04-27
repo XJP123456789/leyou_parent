@@ -19,6 +19,7 @@ public class test {
     public static void main(String[] args) {
         String n = "yyy";
         if(StringUtils.isNotBlank(n)){
+
             throw new SimpleException(StatusCode.REANLNAME_OR_IDNUMBER_ERR);
         }
     }
