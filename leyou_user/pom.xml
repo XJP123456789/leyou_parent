@@ -13,8 +13,5 @@
         <module>leyou_user_interface</module>
         <module>leyou_user_service</module>
     </modules>
-
     <artifactId>leyou_user</artifactId>
-
-
 </project>

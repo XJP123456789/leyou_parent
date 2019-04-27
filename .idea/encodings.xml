@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/../ElasticSearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Sell" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_auth_center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_auth_center/leyou_auth_common" charset="UTF-8" />
@@ -13,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/leyou_item/leyou_item_interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_item/leyou_item_service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leyou_page" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leyou_search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_sms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_upload" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou_user" charset="UTF-8" />

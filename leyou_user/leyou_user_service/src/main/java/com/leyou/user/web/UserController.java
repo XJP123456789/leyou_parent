@@ -25,7 +25,7 @@ public class UserController {
      * @param type
      * @return
      */
-    @GetMapping("/check/{data}/{type}")
+    @PostMapping("/check/{data}/{type}")
     public ResponseEntity<Boolean> checkData(@PathVariable("data") String data, @PathVariable("type") Integer type) {
         return ResponseEntity.ok(userService.checkData(data, type));
     }
@@ -59,7 +59,7 @@ public class UserController {
      * @param password
      * @return
      */
-    @GetMapping("query")
+    @PostMapping("query")
     public ResponseEntity<User> queryUser(@RequestParam("username") String username, @RequestParam("password") String password) {
         return ResponseEntity.ok(userService.queryUser(username, password));
     }

@@ -1,7 +1,7 @@
 package com.leyou.cart.listener;
 
 import com.leyou.cart.service.CartService;
-import com.leyou.spring.common.utils.JsonUtils;
+import com.leyou.common.utils.JsonUtils;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;

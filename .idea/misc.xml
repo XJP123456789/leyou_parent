@@ -6,6 +6,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/../ElasticSearch/pom.xml" />
+        <option value="$PROJECT_DIR$/../demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/../parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../sell/pom.xml" />
+        <option value="$PROJECT_DIR$/../Sell/pom.xml" />
       </list>
     </option>
   </component>
@@ -32,7 +36,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>

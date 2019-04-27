@@ -16,15 +16,20 @@
         <module name="leyou_item_interface" />
         <module name="leyou_item_service" />
         <module name="leyou_order" />
+        <module name="leyou_page" />
+        <module name="leyou_search" />
         <module name="leyou_sms" />
         <module name="leyou_upload" />
         <module name="leyou_user_interface" />
         <module name="leyou_user_service" />
         <module name="leyou_zuul" />
+        <module name="Sell" />
+        <module name="sell" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ElasticSearch" target="1.8" />
+      <module name="demo1" target="1.8" />
+      <module name="ElasticSearch" target="1.5" />
       <module name="elasticsearch" target="1.5" />
       <module name="leyou_auth_center" target="1.8" />
       <module name="leyou_auth_common" target="1.8" />
@@ -36,18 +41,24 @@
       <module name="leyou_item_interface" target="1.8" />
       <module name="leyou_item_service" target="1.8" />
       <module name="leyou_order" target="1.8" />
+      <module name="leyou_page" target="1.8" />
       <module name="leyou_parent" target="1.8" />
+      <module name="leyou_search" target="1.8" />
       <module name="leyou_sms" target="1.8" />
       <module name="leyou_upload" target="1.8" />
       <module name="leyou_user" target="1.8" />
       <module name="leyou_user_interface" target="1.8" />
       <module name="leyou_user_service" target="1.8" />
       <module name="leyou_zuul" target="1.8" />
+      <module name="sell" target="1.8" />
+      <module name="Sell" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ElasticSearch" options="-parameters" />
+      <module name="Sell" options="-parameters" />
+      <module name="demo1" options="-parameters" />
       <module name="leyou_auth_center" options="-parameters" />
       <module name="leyou_auth_common" options="-parameters" />
       <module name="leyou_auth_service" options="-parameters" />
@@ -57,11 +68,14 @@
       <module name="leyou_item_interface" options="-parameters" />
       <module name="leyou_item_service" options="-parameters" />
       <module name="leyou_order" options="-parameters" />
+      <module name="leyou_page" options="-parameters" />
+      <module name="leyou_search" options="-parameters" />
       <module name="leyou_sms" options="-parameters" />
       <module name="leyou_upload" options="-parameters" />
       <module name="leyou_user_interface" options="-parameters" />
       <module name="leyou_user_service" options="-parameters" />
       <module name="leyou_zuul" options="-parameters" />
+      <module name="sell" options="-parameters" />
     </option>
   </component>
 </project>

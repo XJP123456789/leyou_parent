@@ -1,9 +1,9 @@
 package com.leyou.service.service;
 
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.pojo.Brand;
 import com.leyou.item.pojo.Category;
 import com.leyou.item.vo.BrandVo;
-import com.leyou.spring.common.vo.PageResult;
 
 import java.util.List;
 
@@ -29,4 +29,5 @@ public interface BrandService {
 
     List<Brand> queryBrandByIds(List<Long> ids);
 
+    void listMq();
 }

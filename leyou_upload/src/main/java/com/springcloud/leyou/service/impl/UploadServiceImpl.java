@@ -2,14 +2,13 @@ package com.springcloud.leyou.service.impl;
 
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
 import com.springcloud.leyou.config.UploadProperties;
 import com.springcloud.leyou.service.UploadService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

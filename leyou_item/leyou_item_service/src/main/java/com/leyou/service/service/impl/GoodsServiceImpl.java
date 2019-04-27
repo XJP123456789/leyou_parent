@@ -2,13 +2,13 @@ package com.leyou.service.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.dto.CartDto;
 import com.leyou.item.pojo.*;
 import com.leyou.service.mapper.*;
 import com.leyou.service.service.GoodsService;
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
-import com.leyou.spring.common.vo.PageResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -49,8 +49,6 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
     private AmqpTemplate amqpTemplate;
-
-
 
     @Override
     public PageResult<Spu> querySpuByPage(Integer page, Integer rows, String key, Boolean saleable) {
@@ -325,7 +323,7 @@ public class GoodsServiceImpl implements GoodsService {
      */
     private void sendMessage(Long id, String type) {
         try {
-           amqpTemplate.convertAndSend("item." + type, id);
+            amqpTemplate.convertAndSend("item." + type, id);
         } catch (Exception e) {
             log.error("{}商品消息发送异常，商品ID：{}", type, id, e);
         }

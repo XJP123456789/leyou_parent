@@ -1,9 +1,10 @@
 package com.leyou.service.web;
 
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.pojo.Brand;
+import com.leyou.item.pojo.Category;
 import com.leyou.item.vo.BrandVo;
 import com.leyou.service.service.BrandService;
-import com.leyou.spring.common.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +44,7 @@ public class BrandController {
             @RequestParam(value = "desc", defaultValue = "false") Boolean desc,
             @RequestParam(value = "key", required = false) String key
     ) {
+
         return ResponseEntity.ok(brandService.queryBrandByPageAndSort(page, rows, sortBy, desc, key));
 
     }
@@ -118,7 +120,10 @@ public class BrandController {
         return ResponseEntity.ok(brandService.queryBrandByIds(ids));
     }
 
-
+    @GetMapping("mq")
+    public void  listenerMq(){
+        brandService.listMq();
+    }
 
 
 }

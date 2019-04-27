@@ -1,13 +1,12 @@
 package com.leyou.service.service.impl;
 
-
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
 import com.leyou.item.pojo.SpecGroup;
 import com.leyou.item.pojo.SpecParam;
 import com.leyou.service.mapper.SpecGroupMapper;
 import com.leyou.service.mapper.SpecParamMapper;
 import com.leyou.service.service.SpecService;
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;

@@ -3,7 +3,7 @@ package com.leyou.cart.filter;
 import com.leyou.auth.entity.UserInfo;
 import com.leyou.auth.utils.JwtUtils;
 import com.leyou.cart.config.JwtProperties;
-import com.leyou.spring.common.utils.ly.CookieUtils;
+import com.leyou.common.utils.CookieUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

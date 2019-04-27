@@ -1,8 +1,14 @@
 package com.leyou.user.service;
 
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
-import com.leyou.spring.common.utils.NumberUtils;
+
+import com.leyou.common.advice.BasicExceptionHandler;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
+import com.leyou.common.exceptiontest.CException;
+import com.leyou.common.exceptiontest.CExceptionEnums;
+import com.leyou.common.utils.NumberUtils;
+import com.leyou.user.exception.BusinessException;
+import com.leyou.user.exception.SysErrorEnums;
 import com.leyou.user.mapper.UserMapper;
 import com.leyou.user.pojo.User;
 import com.leyou.user.redis.RedisUtils;
@@ -11,7 +17,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import java.util.Date;
@@ -60,10 +65,14 @@ public class UserService {
         String key = KEY_PREFIX + phone;
 
         System.out.println(key);
+        System.out.println(code);
 
         //把验证码放入Redis中，并设置有效期为5min
         try {
            redisUtils.set(key, code, 5, TimeUnit.MINUTES);
+           // redisUtils.set(key,code);
+           // redisUtils.expire(key,300);
+            //String o = (String) redisUtils.get(key);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,9 +87,7 @@ public class UserService {
         user.setId(null);
         user.setCreated(new Date());
         String key = KEY_PREFIX + user.getPhone();
-
         String value = (String) redisUtils.get(key);
-
         if (!StringUtils.equals(code, value)) {
             //验证码不匹配
             throw new LyException(ExceptionEnum.VERIFY_CODE_NOT_MATCHING);
@@ -92,7 +99,6 @@ public class UserService {
 
         //生成密码
         String md5Pwd = CodecUtils.md5Hex(user.getPassword(), user.getSalt());
-
         user.setPassword(md5Pwd);
 
         //保存到数据库
@@ -111,14 +117,11 @@ public class UserService {
     public User queryUser(String username, String password) {
         User record = new User();
         record.setUsername(username);
-
         //首先根据用户名查询用户
         User user = userMapper.selectOne(record);
-
         if (user == null) {
             throw new LyException(ExceptionEnum.USER_NOT_EXIST);
         }
-
         //检验密码是否正确
         if (!StringUtils.equals(CodecUtils.md5Hex(password, user.getSalt()), user.getPassword())) {
             //密码不正确

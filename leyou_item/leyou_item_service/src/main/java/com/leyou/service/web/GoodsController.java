@@ -1,11 +1,11 @@
 package com.leyou.service.web;
 
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.dto.CartDto;
 import com.leyou.item.pojo.Sku;
 import com.leyou.item.pojo.Spu;
 import com.leyou.item.pojo.SpuDetail;
 import com.leyou.service.service.GoodsService;
-import com.leyou.spring.common.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

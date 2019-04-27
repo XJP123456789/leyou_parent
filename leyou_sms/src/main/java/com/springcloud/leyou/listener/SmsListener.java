@@ -1,6 +1,6 @@
 package com.springcloud.leyou.listener;
 
-import com.leyou.spring.common.utils.JsonUtils;
+import com.leyou.common.utils.JsonUtils;
 import com.springcloud.leyou.properties.SmsProperties;
 import com.springcloud.leyou.utils.SmsUtil;
 import lombok.extern.slf4j.Slf4j;

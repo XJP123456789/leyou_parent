@@ -1,7 +1,7 @@
 package com.leyou.service.mapper;
 
+import com.leyou.common.mapper.BaseMapper;
 import com.leyou.item.pojo.Stock;
-import com.leyou.spring.common.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
 

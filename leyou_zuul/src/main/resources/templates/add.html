@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>添加用户</title>
+</head>
+<body>
+<form th:action="@{/save}" method="post">
+	用户姓名：<input type="text" name="name"/><span color="red" th:errors="${users.name}"></span><br/>
+	用户密码：<input type="password" name="password" /><span color="red" th:errors="${users.password}"></span><br/>
+	用户年龄：<input type="text" name="age" /><span color="red" th:errors="${users.age}"></span><br/>
+	用户邮箱：<input type="email" name="email" /><span color="red" th:errors="${users.email}"></span><br/>
+	<input type="submit" value="OK"/>
+</form>
+</body>
+</html>

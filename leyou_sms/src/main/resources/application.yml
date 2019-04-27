@@ -22,7 +22,7 @@ spring:
     timeout: 1000
 ly:
   sms:
-    accessKeyId: LTAI4qdaJMgFOrou # 你自己的accessKeyId
-    accessKeySecret: 1Fny4oQT1xGpXVGaQAmoACgBM0HdPW # 你自己的AccessKeySecret
-    signName: 乐优商城 # 签名名称
-    verifyCodeTemplate: SMS_146802257 # 模板名称
+    accessKeyId: LTAIOZd6njQ1pBZS # 你自己的accessKeyId
+    accessKeySecret: jvTUSzOwVcXNDs95i38QzwXk4IaONK # 你自己的AccessKeySecret
+    signName: 北极星的夜晚 # 签名名称
+    verifyCodeTemplate: SMS_154587962 # 模板名称

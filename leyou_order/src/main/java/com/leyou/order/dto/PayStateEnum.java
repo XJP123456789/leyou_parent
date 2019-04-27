@@ -6,7 +6,9 @@ package com.leyou.order.dto;
  */
 public enum PayStateEnum {
 
-    NOT_PAY(0), SUCCESS(1), FAIL(2);
+    NOT_PAY(0),
+    SUCCESS(1),
+    FAIL(2);
 
     int value;
 

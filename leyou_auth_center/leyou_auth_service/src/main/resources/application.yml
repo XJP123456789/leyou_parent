@@ -3,6 +3,18 @@ server:
 spring:
   application:
     name: auth-service
+  redis:
+    host: 47.99.171.90
+    password: 941008
+    port: 6379
+    database: 1
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1
+        min-idle: 0
+        max-idle: 10
+    timeout: 1000
 eureka:
   client:
     service-url:
@@ -17,8 +29,8 @@ eureka:
 ly:
   jwt:
     secret: ly@Login(Auth}*^31)&yun6%f3q2 # 登录校验的密钥
-    pubKeyPath: /Users/bystander/id_rsa.pub # 公钥地址
-    priKeyPath: /Users/bystander/id_rsa.pri # 私钥地址
+    pubKeyPath: E:\key\rsa\rsa.pub # 公钥地址
+    priKeyPath: E:\key\rsa\rsa.pri # 私钥地址
     expire: 30 # 过期时间,单位分钟
     cookieName: LY_TOKEN
     cookieMaxAge: 1800

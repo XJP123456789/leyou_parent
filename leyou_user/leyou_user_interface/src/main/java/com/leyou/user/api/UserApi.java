@@ -14,7 +14,7 @@ import javax.validation.Valid;
  */
 public interface UserApi {
 
-    @GetMapping("/check/{data}/{type}")
+    @PostMapping("/check/{data}/{type}")
     Boolean checkData(@PathVariable("data") String data, @PathVariable("type") Integer type) ;
     /**
      * 发送验证码
@@ -38,6 +38,6 @@ public interface UserApi {
      * @param password
      * @return
      */
-    @GetMapping("/query")
+    @PostMapping("/query")
     User queryUser(@RequestParam("username") String username, @RequestParam("password") String password);
 }

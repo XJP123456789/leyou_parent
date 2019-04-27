@@ -23,7 +23,7 @@ public class JwtUtilsTest {
 
     @Test
     public void testRsa() throws Exception {
-        RsaUtils.generateKey(publicKeyPath, privateKeyPath, "2345");
+        RsaUtils.generateKey(publicKeyPath, privateKeyPath, "23454554454");
     }
 
     @Before
@@ -42,7 +42,7 @@ public class JwtUtilsTest {
 
     @Test
     public void parseToken() {
-        String token = "eyJhbGciOiJSUzI1NiJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoiSmFjayIsImV4cCI6MTUzODM2OTM3N30.Vi7UJrwMu0BOHMQoSSLefzGU1ir5LG-drcvAHPjMMMBzQz1oASjoDsiuw3h0bqVUUWXjdNcpybCWVuZ8UvOXOr-Jecqjz3NF_ZDfgessRGsijIIbju0qak6Zfm09jsjnHFTZ2munFJdM0I0RsiafQtkJSiLji7QXlvjCquKJUkg";
+        String token = "eyJhbGciOiJSUzI1NiJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoiSmFjayIsImV4cCI6MTU0NzA5MDk2Mn0.gxjjZj-STegFERKrIL3PTwMVRfWp1Iw_M22RsA4yB1XP3KcyrnSXFvo19UZWDZadqPzLoqFfI9f81d3YYIIOrXivSUa-xsXqNLtUDsjTkT84T0z2TyXo07O9CmCpfevbIy_PbuWU4cn03qR16L3EQ8KEDONI8NjZj_pA-vbCV24";
         UserInfo userInfo = JwtUtils.getUserInfo(publicKey, token);
         System.out.println("id:" + userInfo.getId());
         System.out.println("name:" + userInfo.getName());

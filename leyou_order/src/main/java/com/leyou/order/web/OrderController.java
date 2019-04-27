@@ -1,10 +1,10 @@
 package com.leyou.order.web;
 
+import com.leyou.common.vo.PageResult;
 import com.leyou.order.dto.OrderDto;
 import com.leyou.order.pojo.Order;
 import com.leyou.order.service.OrderService;
 import com.leyou.order.service.PayLogService;
-import com.leyou.spring.common.vo.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

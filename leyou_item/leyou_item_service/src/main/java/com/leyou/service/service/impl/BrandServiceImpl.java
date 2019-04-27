@@ -2,15 +2,17 @@ package com.leyou.service.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.pojo.Brand;
 import com.leyou.item.pojo.Category;
 import com.leyou.item.vo.BrandVo;
 import com.leyou.service.mapper.BrandMapper;
 import com.leyou.service.service.BrandService;
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
-import com.leyou.spring.common.vo.PageResult;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,10 +26,14 @@ import java.util.List;
  * @date 2018/9/15
  */
 @Service
+@Slf4j
 public class BrandServiceImpl implements BrandService {
 
     @Autowired
     private BrandMapper brandMapper;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
 
     @Override
@@ -49,6 +55,7 @@ public class BrandServiceImpl implements BrandService {
         }
 
         PageInfo<Brand> pageInfo = new PageInfo<>(brandList);
+
 
         return new PageResult<>(pageInfo.getTotal(), brandList);
     }
@@ -148,6 +155,25 @@ public class BrandServiceImpl implements BrandService {
             throw new LyException(ExceptionEnum.BRAND_NOT_FOUND);
         }
         return brands;
+    }
+
+    @Override
+    public void listMq() {
+        sendMessage(1,"mq");
+    }
+
+    /**
+     * 封装发送到消息队列的方法
+     *
+     * @param id
+     * @param type
+     */
+    private void sendMessage(Integer id, String type) {
+        try {
+            amqpTemplate.convertAndSend("item." + type, id);
+        } catch (Exception e) {
+            log.error("{}商品消息发送异常，商品ID：{}", type, id, e);
+        }
     }
 
 }

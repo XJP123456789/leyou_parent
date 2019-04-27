@@ -1,7 +1,7 @@
 package com.leyou.service.mapper;
 
+import com.leyou.common.mapper.BaseMapper;
 import com.leyou.item.pojo.Sku;
-import com.leyou.spring.common.mapper.BaseMapper;
 
 /**
  * @author bystander

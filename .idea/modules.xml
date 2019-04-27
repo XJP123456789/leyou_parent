@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ElasticSearch/ElasticSearch.iml" filepath="$PROJECT_DIR$/../ElasticSearch/ElasticSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Sell/Sell.iml" filepath="$PROJECT_DIR$/../Sell/Sell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../demo/demo.iml" filepath="$PROJECT_DIR$/../demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_auth_center/leyou_auth_center.iml" filepath="$PROJECT_DIR$/leyou_auth_center/leyou_auth_center.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_auth_center/leyou_auth_common/leyou_auth_common.iml" filepath="$PROJECT_DIR$/leyou_auth_center/leyou_auth_common/leyou_auth_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_auth_center/leyou_auth_service/leyou_auth_service.iml" filepath="$PROJECT_DIR$/leyou_auth_center/leyou_auth_service/leyou_auth_service.iml" />
@@ -13,13 +15,16 @@
       <module fileurl="file://$PROJECT_DIR$/leyou_item/leyou_item_interface/leyou_item_interface.iml" filepath="$PROJECT_DIR$/leyou_item/leyou_item_interface/leyou_item_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_item/leyou_item_service/leyou_item_service.iml" filepath="$PROJECT_DIR$/leyou_item/leyou_item_service/leyou_item_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_order/leyou_order.iml" filepath="$PROJECT_DIR$/leyou_order/leyou_order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leyou_page/leyou_page.iml" filepath="$PROJECT_DIR$/leyou_page/leyou_page.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_parent.iml" filepath="$PROJECT_DIR$/leyou_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leyou_search/leyou_search.iml" filepath="$PROJECT_DIR$/leyou_search/leyou_search.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_sms/leyou_sms.iml" filepath="$PROJECT_DIR$/leyou_sms/leyou_sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_upload/leyou_upload.iml" filepath="$PROJECT_DIR$/leyou_upload/leyou_upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_user/leyou_user.iml" filepath="$PROJECT_DIR$/leyou_user/leyou_user.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_user/leyou_user_interface/leyou_user_interface.iml" filepath="$PROJECT_DIR$/leyou_user/leyou_user_interface/leyou_user_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_user/leyou_user_service/leyou_user_service.iml" filepath="$PROJECT_DIR$/leyou_user/leyou_user_service/leyou_user_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/leyou_zuul/leyou_zuul.iml" filepath="$PROJECT_DIR$/leyou_zuul/leyou_zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sell/sell.iml" filepath="$PROJECT_DIR$/../sell/sell.iml" />
     </modules>
   </component>
 </project>

@@ -1,10 +1,10 @@
 package com.leyou.item.api;
 
+import com.leyou.common.vo.PageResult;
 import com.leyou.item.dto.CartDto;
 import com.leyou.item.pojo.Sku;
 import com.leyou.item.pojo.Spu;
 import com.leyou.item.pojo.SpuDetail;
-import com.leyou.spring.common.vo.PageResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

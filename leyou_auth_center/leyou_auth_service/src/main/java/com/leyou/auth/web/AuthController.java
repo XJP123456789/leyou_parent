@@ -4,9 +4,9 @@ import com.leyou.auth.entity.UserInfo;
 import com.leyou.auth.properties.JwtProperties;
 import com.leyou.auth.service.AuthService;
 import com.leyou.auth.utils.JwtUtils;
-import com.leyou.spring.common.enums.ExceptionEnum;
-import com.leyou.spring.common.exception.LyException;
-import com.leyou.spring.common.utils.ly.CookieUtils;
+import com.leyou.common.enums.ExceptionEnum;
+import com.leyou.common.exception.LyException;
+import com.leyou.common.utils.CookieUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -53,7 +53,7 @@ public class AuthController {
         if (StringUtils.isBlank(token)) {
             throw new LyException(ExceptionEnum.USERNAME_OR_PASSWORD_ERROR);
         }
-        // 将Token写入cookie中
+        //将Token写入cookie中
         CookieUtils.newBuilder(response).httpOnly().maxAge(props.getCookieMaxAge()).request(request).build(props.getCookieName(), token);
         return ResponseEntity.ok().build();
     }

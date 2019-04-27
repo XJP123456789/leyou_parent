@@ -18,6 +18,8 @@
         <module>leyou_auth_center</module>
         <module>leyou_cart</module>
         <module>leyou_order</module>
+        <module>leyou_search</module>
+        <module>leyou_page</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -86,6 +88,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

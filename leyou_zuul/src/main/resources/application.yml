@@ -22,10 +22,10 @@ zuul:
     user-service: /user/**
     auth-service: /auth/**
     cart-service: /cart/**
-    order-service: /order-service/**
-   search-service: /search/**
-#  sensitive-headers:
-#  add-host-header: true
+    order-service: /order/**
+    search-service: /search/**
+  sensitive-headers:
+  add-host-header: true
 hystrix:
   command:
     default:
@@ -38,16 +38,16 @@ ribbon:
   ReadTimeout: 5000
   MaxAutoRestries: 0  #当前服务重试次数
   MaxAutoRestriesNextServer: 0  #切换重试次数
-#ly:
-#  jwt:
-#    pubKeyPath: /Users/bystander/id_rsa.pub # 公钥地址
-#    cookieName: LY_TOKEN # cookie的名称
-#  filter:
-#    allowPaths:
-#    - /api/auth
-#    - /api/search
-#    - /api/user/register
-#    - /api/user/check
-#    - /api/user/code
-#    - /api/item
+ly:
+  jwt:
+    pubKeyPath: E:\key\rsa\rsa.pub # 公钥地址
+    cookieName: LY_TOKEN # cookie的名称
+  filter:
+    allowPaths:
+    - /api/auth
+    - /api/search
+    - /api/user/register
+    - /api/user/check
+    - /api/user/code
+    - /api/item
 
